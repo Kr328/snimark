@@ -27,13 +27,13 @@ func main() {
 		return
 	}
 
-	exe, err := server.New(cfg)
+	srv, err := server.New(cfg)
 	if err != nil {
 		fmt.Printf("Start service: %s\n", err.Error())
 		return
 	}
 
-	if err := exe.Exec(); err != nil {
+	if err := srv.Exec(); err != nil {
 		fmt.Printf("Execute service: %s\n", err.Error())
 		return
 	}
